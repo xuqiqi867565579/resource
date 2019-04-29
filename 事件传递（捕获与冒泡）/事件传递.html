@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件传递</title>
+    <style>
+        div{
+            border-radius: 50%; display: flex; justify-content: center; align-items: center;
+        }
+        .red{
+            width:400px; height:400px; background: red;
+        }
+        .green{
+            width:300px; height:300px; background: green;
+        }
+        .pink{
+            width:200px; height:200px; background: pink;
+        }
+        .orange{
+            width:100px; height:100px; background: orange;
+        }
+        .header{
+            height:200px; background: blue; border-radius: 0; display: block;
+        }
+        .box{
+            width:200px; height:400px; background: transparent; border-radius: 0; z-index: 999; position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <p class="box"></p>
+    </header>
+    <div class="red">
+        <div class="green">
+            <div class="pink">
+                <div class="orange"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const divs = document.getElementsByTagName('div');
+        divs[0].addEventListener('click',() => {
+            alert('red');
+        },true);
+        divs[1].addEventListener('click',() => {
+            alert('green');
+        },false);
+        divs[2].addEventListener('click',(ev) => {
+            ev.stopPropagation();
+            alert('pink');
+        },true);
+        divs[3].addEventListener('click',() => {
+            alert('orange');
+        },false);
+    </script>
+</body>
+</html>

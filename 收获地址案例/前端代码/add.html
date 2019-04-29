@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编辑地址</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/add.css" />
+</head>
+<body>
+    <div class="address">
+        <header>
+            <div><a href="index.html">返回</a></div>
+            <div id="title">编辑地址</div>
+            <div class="del" id="del">删除</div>
+        </header>
+        <section>
+            <ul>
+                <li class="input">
+                    <span>联系人</span>
+                    <input data-prop="concats" type="text" />
+                </li>
+                <li class="sex">
+                    <span class="active">先生</span>
+                    <span>女士</span>
+                </li>
+                <li class="input">
+                    <span>电话</span>
+                    <input type="text" data-prop="tel" />
+                </li>
+                <li class="input">
+                    <span>地址</span>
+                    <input type="text" data-prop="address" />
+                </li>
+                <li class="input">
+                    <span>门牌号</span>
+                    <input type="text" data-prop="area" />
+                </li>     
+            </ul>
+            <div class="btn">确定</div>
+        </section>
+    </div>
+    <script src="js/rem.js"></script>
+    <script src="js/add.js"></script>
+</body>
+</html>

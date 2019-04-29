@@ -74,3 +74,10 @@ Object.getOwnPropertyNames(obj); // ['a','b','c']
     var obj = {[a]:1}
     Object.getOwnPropertySymbols(obj) // [Symbol值]
 ```
+```js
+ [].fill(要生成的元素,开始改变的下标,结束的长度);
+ ['a', 'b', 'c'].fill(7, 1, 2)
+// ['a', 7, 'c']
+上面代码表示，fill()方法从 1 号位开始，向原数组填充 7，到 2 号位之前结束。
+
+```
